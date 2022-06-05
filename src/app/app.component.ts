@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  notifications=0;
+  showSpinner = false;
+
+  loadSpinner(){
+    this.showSpinner=true;
+    setTimeout(()=>{
+   this.showSpinner=false; 
+      
+    },5000)
+  }
 }

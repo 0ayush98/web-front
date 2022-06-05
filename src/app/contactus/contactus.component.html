@@ -1,0 +1,75 @@
+
+
+<div class="container mt-5">
+    <p class="lead">If you require any further information, feel free to contact us</p>
+
+    <p class="lead">Please fill the form </p>
+
+    <mat-stepper class="example-stepper  mat-elevation-z24 " [orientation]="(stepperOrientation | async)!">
+        <mat-step [stepControl]="firstFormGroup" label="Fill out your name" color="accent">
+            <form [formGroup]="firstFormGroup">
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="secondFormGroup" label="Fill out your address" color="accent">
+            <form [formGroup]="secondFormGroup">
+                <mat-form-field appearance="fill">
+                    <mat-label>Address</mat-label>
+                    <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY" required>
+                </mat-form-field>
+                <div>
+                    <button mat-raised-button matStepperPrevious>Back</button>
+                    <button mat-raised-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step [stepControl]="thirdFormGroup" label="Fill out your phone number" color="accent">
+            <form [formGroup]="thirdFormGroup">
+                <mat-form-field appearance="fill">
+                    <mat-label>Phone number</mat-label>
+                    <input  matInput formControlName="thirdCtrl" placeholder="Ex. 12345678" required>
+                </mat-form-field>
+                <div>
+                    <button mat-raised-button matStepperPrevious>Back</button>
+                    <button mat-raised-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+        <mat-step>
+            <ng-template matStepLabel>Done</ng-template>
+            <p style="color: #4d4c48">You are now done.</p>
+            <div>
+                <button mat-raised-button matStepperPrevious>Back</button>
+            </div>
+        </mat-step>
+    </mat-stepper>
+
+    <div class=" ct d-flex flex-wrap justify-content-around text-center mt-5 p-5" style="color:aliceblue">
+
+        <div>
+
+
+            <mat-icon>phone_in_talk</mat-icon>&nbsp; &nbsp;
+            <span>912225652 , 9323322323</span>
+            <br>
+            <mat-icon>mail</mat-icon>
+            <span> &nbsp; product_support@email.com</span>
+        </div>
+
+        <div>
+
+            <i class="fa-brands mx-2 fs-1 fa-facebook-square"></i>
+            <i class="fa-brands mx-2 fs-1 fa-instagram"></i>
+            <i class="fa-brands mx-2 fs-1 fa-linkedin"></i>
+        </div>
+
+        
+    </div>
+
+</div>
